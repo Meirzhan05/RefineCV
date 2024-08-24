@@ -13,10 +13,7 @@ const fadeIn = keyframes`
   }
 `;
 
-const fadeInAnimation = css`
-    animation: ${fadeIn} 0.3s ease-in;
 
-`;
 
 export default function Chat({messages}) {
     const messagesEndRef = useRef(null);
@@ -36,7 +33,17 @@ export default function Chat({messages}) {
             mb: 5,
 
         }}>
-            {messages.map((message, index) => {
+            {!messages.length ? 
+                <Box sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100vh',
+                    color: 'gray',
+                }}>
+                    No Messages
+                </Box>  
+            : messages.map((message, index) => {
                 if (message.user === "system") {
                     return null;  // Skip rendering for this message
                 }
@@ -51,7 +58,6 @@ export default function Chat({messages}) {
                     }}>
                         {message.user === "bot" ? 
                             <Box sx={{
-                                // ...fadeInAnimation, 
                                 backgroundColor: "#4D6DFF",
                                 color: "white",
                                 padding: 2,

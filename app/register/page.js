@@ -1,10 +1,10 @@
 'use client'
-import { Box, Button, Icon, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { UserAuth } from '@/contexts/AuthContext';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import IconButton from '@mui/material/IconButton';
-import { Google } from '@mui/icons-material';
+import { Google, Logout } from '@mui/icons-material';
 export default function Register() {
     const { user, googleSignIn } = UserAuth();
     const router = useRouter();
@@ -23,28 +23,27 @@ export default function Register() {
       }
     };
     return (
-        <Box 
+      <Box 
         display="flex" 
         flexDirection="column" 
         alignItems="center" 
         justifyContent="center" 
-        style={{ minHeight: '100vh' }}
+        sx={{ minHeight: '100vh'}}
         gap={5}
       >
-            <Typography 
-                variant="h2" 
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                    marginBottom: '2rem',
-                    flexWrap: 'wrap',
-                }}
-                >
-                The simplest path to <br/> 
-                <Box sx={{ color: '#4D6DFF'}}>customer delight</Box>
-            </Typography>
+        <Typography 
+            variant="h2" 
+            sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                fontWeight: 'bold',
+                textAlign: 'center',
+                marginBottom: '2rem',
+
+            }}
+            >
+            How strong is your resume?
+        </Typography>
         <IconButton
             onClick={handleGoogleSignIn}
             sx={{
@@ -53,10 +52,10 @@ export default function Register() {
                 display: 'flex',
                 flexDirection: 'row',
                 gap: 1,
-                transition: '0.5s', // Add this line
+                transition: '0.5s',
                 '&:hover': {
-                    bgcolor: 'lightgray', // Change the background color on hover
-                    color: 'black', // Change the text color on hover
+                    bgcolor: 'lightgray', 
+                    color: 'black',
                 },
             }}
         >
