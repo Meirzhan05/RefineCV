@@ -1,5 +1,5 @@
 'use client'
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { UserAuth } from '@/contexts/AuthContext';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -44,24 +44,22 @@ export default function Register() {
             >
             How strong is your resume?
         </Typography>
-        <IconButton
+        <Button
             onClick={handleGoogleSignIn}
+            variant='contained'
             sx={{
-                border: '1px solid black',
+                width: '10rem',
+                height: '3rem',
+                backgroundColor: '#4D6DFF',
                 borderRadius: 2,
                 display: 'flex',
                 flexDirection: 'row',
                 gap: 1,
                 transition: '0.5s',
-                '&:hover': {
-                    bgcolor: 'lightgray', 
-                    color: 'black',
-                },
             }}
         >
-            <Google/>
-            <Typography>Sign in with Google</Typography>
-        </IconButton>
+            <Typography sx={{fontWeight: "bold", color: "white"}}>Get Started</Typography>
+        </Button>
       </Box>
     )
 }
