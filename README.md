@@ -6,7 +6,7 @@ RefineCV is an AI-powered resume review application that helps users improve the
 
 Experience RefineCV in action! Visit our live demo:
 
-[**Try RefineCV Now**][https://refinecv.vercel.app](https://resume-reviewer-six.vercel.app/)
+[**Try RefineCV Now**](https://resume-reviewer-six.vercel.app/)
 
 ## Features 🚀
 
