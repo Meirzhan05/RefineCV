@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# RefineCV 📄✨
 
-## Getting Started
+RefineCV is an AI-powered resume review application that helps users improve their resumes and increase their chances of landing their dream job.
 
-First, run the development server:
+## Live Demo 🌐
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Experience RefineCV in action! Visit our live demo:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[**Try RefineCV Now**][https://refinecv.vercel.app](https://resume-reviewer-six.vercel.app/)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features 🚀
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **AI-Powered Resume Analysis**: Utilizes advanced language models to evaluate resumes.
+- **Instant Feedback**: Provides immediate suggestions for improvement.
+- **Score System**: Rates resumes on a scale of 0-100.
+- **File Upload**: Supports .docx file uploads for easy resume submission.
+- **Chat Interface**: User-friendly chat-based interaction for a seamless experience.
+- **Google Authentication**: Secure sign-in process using Google accounts.
 
-## Learn More
+## Tech Stack 💻
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend**: Next.js, React
+- **Backend**: Node.js
+- **AI/ML**: LangChain, Groq, OpenAI
+- **Database**: Pinecone (Vector Database)
+- **Authentication**: Firebase
+- **Styling**: Material-UI (MUI)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Getting Started 🏁
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+- Node.js (v14 or later)
+- npm or yarn
+- Firebase account
+- Pinecone account
+- Groq API key
+- OpenAI API key
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/refinecv.git
+   ```
+
+2. Install dependencies:
+   ```
+   cd refinecv
+   npm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the following:
+   ```
+   NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+   NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
+   NEXT_PUBLIC_PINECONE_API_KEY=your_pinecone_api_key
+   NEXT_PUBLIC_PINECONE_INDEX=your_pinecone_index_name
+   NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key
+   NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key
+   ```
+
+4. Run the development server:
+   ```
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Usage 📝
+
+1. Sign in using your Google account.
+2. Upload your resume (.docx format) or type your resume content into the chat.
+3. Ask questions or request feedback about your resume.
+4. Receive AI-generated suggestions and a score for your resume.
+5. Implement the suggestions to improve your resume.
+
+## Acknowledgments 🙏
+
+- [LangChain](https://github.com/hwchase17/langchain) for the powerful language model tools.
+- [Pinecone](https://www.pinecone.io/) for vector database capabilities.
+- [Firebase](https://firebase.google.com/) for authentication services.
+- [Material-UI](https://mui.com/) for the sleek UI components.
+
+
+Happy job hunting! 🎉
